@@ -1,5 +1,6 @@
 using UnityEngine;
 using Platformer.Mechanics;
+using System;
 
 public class JumpingEnemy : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class JumpingEnemy : MonoBehaviour
 
     void initializeTimer()
     {
-        timer = initTimer + 0.05 * Random.Range(0, 5);  
+        timer = initTimer + 0.05 * UnityEngine.Random.Range(0, 5);
+        UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
     }
 }
